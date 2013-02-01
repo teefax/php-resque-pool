@@ -10,7 +10,7 @@ Benefits
 ---------
 
 * Less config - With a simple YAML file, you can start up a pool daemon.
-* Monitoring - If a worker dies for some reason, php-resque-pool will start 
+* Monitoring - If a worker dies for some reason, php-resque-pool will start
   another.
 * Easily change worker distribution - To change your worker counts just update
   the YAML file and send the manager a HUP signal.
@@ -64,6 +64,8 @@ grep [r]esque` (in Linux) might return something like the following:
     resque    13875 13858  0 13:44 ?        S      0:00  \_ resque-1.0: Waiting for foo,bar,baz
     resque    13876 13858  0 13:44 ?        S      0:00  \_ resque-1.0: Forked 7485 at 1280343255
     resque     7485 13876  0 14:54 ?        S      0:00      \_ resque-1.0: Processing bar since 1280343254
+
+You can get similar output with pstree, or on some systems with `ps auxd | grep [r]esque`
 
 Running as a daemon will currently output to stdout, although this will be configurable
 in the future.
