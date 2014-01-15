@@ -24,7 +24,7 @@ case "$1" in
   start)
     echo -n "Starting $DESC: "
     start-stop-daemon --start --name $NAME -v -b -x $DAEMON \
-           -p /tmp/$NAME.pid -m $DAEMON -- --config $CONFIG_FILE 1>>/var/log/$NAME.log >> /var/log/$NAME.error.log
+           -p /tmp/$NAME.pid -- --config $CONFIG_FILE 1>>/var/log/$NAME.log >> /var/log/$NAME.error.log
 
     echo "$NAME."
     ;;
@@ -47,7 +47,7 @@ case "$1" in
     start-stop-daemon --stop -x $DAEMON -p /tmp/$NAME.pid -q
     sleep 1
     start-stop-daemon --start --name $name -v -b -x $DAEMON \
-           -p /tmp/$NAME.pid -m $DAEMON 1>>/var/log/$NAME.log >> /var/log/$NAME.log2
+           -p /tmp/$NAME.pid 1>>/var/log/$NAME.log >> /var/log/$NAME.log2
     echo "$NAME."
     ;;
   *)
