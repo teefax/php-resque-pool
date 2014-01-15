@@ -11,9 +11,9 @@
 ### END INIT INFO
 # Install in /etc/init.d
 
-PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/qmsys/bin
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 DAEMON=/var/www/dev/vendor/ebernhardson/php-resque-pool/bin/resque-pool
-NAME=resque-pool
+NAME=resque
 DESC="Resque"
 CONFIG_FILE="/etc/resque/pool.yml"
 
