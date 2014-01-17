@@ -2,3 +2,4 @@
 vendor/*
 resque-pool.yml
 
+/vendor
