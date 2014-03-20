@@ -1,11 +1,19 @@
 #!/usr/bin/env php
 <?php
 
-$autoload_path = __DIR__.'/../vendor/autoload.php';
-if(!file_exists($autoload_path)){
-	$autoload_path = __DIR__.'/../../../autoload.php';
+// Find and initialize Composer
+$files = array(
+  __DIR__ . '/../../../autoload.php',
+  __DIR__ . '/../vendor/autoload.php',
+);
+
+$found = false;
+foreach ($files as $file) {
+    if (file_exists($file)) {
+        require_once $file;
+        break;
+    }
 }
-require_once $autoload_path;
 
 $cli = new Resque\Pool\Cli;
 $cli->run();
