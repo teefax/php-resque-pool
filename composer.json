@@ -1,9 +1,9 @@
 {
-    "name": "shonm/php-resque-pool",
+    "name": "teefax/php-resque-pool",
     "type": "library",
     "description": "php-resque worker pool manager",
     "keywords": [],
-    "homepage": "http://github.com/ShonM/php-resque-pool",
+    "homepage": "http://github.com/teefax/php-resque-pool",
     "license": "",
     "authors": [
         {
